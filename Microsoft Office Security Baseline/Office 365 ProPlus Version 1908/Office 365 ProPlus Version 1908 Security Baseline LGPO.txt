@@ -926,7 +926,7 @@ Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICT
 mse7.exe
 DWORD:1
 
-; Computer Configuration\Administrative Templates\MS Security Guide\Block Flash activation in Office documents - Enabled: Block all activation
+; Computer Configuration\Administrative Templates\MS Security Guide\Block Flash activation in Office documents - Block all activation
 Computer
 Software\Microsoft\Office\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
 ActivationFilterOverride
@@ -1025,13 +1025,19 @@ DisableHTTPConnect
 DWORD:1
 
 ;----------Begin User Configuration Local Group Policy----------
+; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\Block macros from running in Office files from the Internet - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Access\Security
+BlockContentExecutionFromInternet
+DWORD:1
+
 ; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
 User
 Software\Policies\Microsoft\Office\16.0\Access\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\VBA Macro Notification Settings - Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\Access\Security
 VBAWarnings
@@ -1073,13 +1079,13 @@ Software\Policies\Microsoft\Office\16.0\Excel\Options
 DisableAutoRepublishWarning
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Force file extension to match file type - Enabled: Always match file type
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Force file extension to match file type - Always match file type
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security
 ExtensionHardening
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Scan encrypted macros in Excel Open XML workbooks - Enabled: Scan encrypted macros (default)
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Scan encrypted macros in Excel Open XML workbooks - Scan encrypted macros (default)
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security
 ExcelBypassEncryptedMacroScan
@@ -1091,7 +1097,7 @@ Software\Policies\Microsoft\Office\16.0\Excel\Security\FileValidation
 EnableOnLoad
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\WEBSERVICE Function Notification Settings - Enabled: Disable all with notification
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\WEBSERVICE Function Notification Settings - Disable all with notification
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security
 WebServiceFunctionWarnings
@@ -1109,89 +1115,119 @@ Software\Policies\Microsoft\Office\16.0\Excel\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\VBA Macro Notification Settings - Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security
 VBAWarnings
 DWORD:3
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\dBase III / IV files - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\External Content\Always prevent untrusted Microsoft Query files from opening - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\External Content
+EnableBlockUnsecureQueryFiles
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\External Content\Don’t allow Dynamic Data Exchange (DDE) server launch in Excel - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\External Content
+DisableDDEServerLaunch
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\External Content\Don’t allow Dynamic Data Exchange (DDE) server lookup in Excel - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\External Content
+DisableDDEServerLookup
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\dBase III / IV files - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 dBaseFiles
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Dif and Sylk files - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Dif and Sylk files - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 DifandSylkFiles
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 2 macrosheets and add-in files - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 2 macrosheets and add-in files - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl2Macros
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 2 worksheets - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 2 worksheets - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl2Worksheets
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 3 macrosheets and add-in files - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 3 macrosheets and add-in files - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl3Macros
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 3 worksheets - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 3 worksheets - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl3Worksheets
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 macrosheets and add-in files - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 macrosheets and add-in files - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl4Macros
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 workbooks - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 workbooks - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl4Workbooks
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 worksheets - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 worksheets - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl4Worksheets
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 95 workbooks - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 95 workbooks - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl95Workbooks
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 95-97 workbooks and templates - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 95-97 workbooks and templates - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 xl9597WorkbooksAndTemplates
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Set default file block behavior - Enabled: Blocked files are not opened
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 97-2003 workbooks and templates - Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl97WorkbooksAndTemplates
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Set default file block behavior - Blocked files are not opened
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 OpenInProtectedView
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Web pages and Excel 2003 XML spreadsheets - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Web pages and Excel 2003 XML spreadsheets - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
 HTMLAndXMLSSFiles
 DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Always open untrusted database files in Protected View - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\ProtectedView
+EnableDatabaseFileProtectedView
+DWORD:1
 
 ; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Do not open files from the Internet zone in Protected View - Disabled
 User
@@ -1205,7 +1241,7 @@ Software\Policies\Microsoft\Office\16.0\Excel\Security\ProtectedView
 DisableUnsafeLocationsInPV
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Enabled: Open in Protected View and Unchecked for "Do not allow edit"
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Open in Protected View and Unchecked for "Do not allow edit"
 User
 Software\Policies\Microsoft\Office\16.0\Excel\Security\FileValidation
 OpenInProtectedView
@@ -1228,7 +1264,7 @@ Software\Policies\Microsoft\Office\16.0\Excel\Security\Trusted Locations
 AllowNetworkLocations
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Office 2016\Global Options\Customize\Disable UI extending from documents and templates - Enabled: Disallow in Word; Excel; PowerPoint; Acceess; Outlook; Publisher; Project; Visio, InfoPath
+; User Configuration\Administrative Templates\Microsoft Office 2016\Global Options\Customize\Disable UI extending from documents and templates - Disallow in Word; Excel; PowerPoint; Acceess; Outlook; Publisher; Project; Visio, InfoPath
 User
 Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Word
 NoExtensibilityCustomizationFromDocument
@@ -1278,9 +1314,9 @@ DWORD:1
 User
 Software\Policies\Microsoft\Office\Common\Security
 UFIControls
-DELETE
+DWORD:6
 
-; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security - Enabled: Use application macro security level
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security - Use application macro security level
 User
 Software\Policies\Microsoft\Office\Common\Security
 AutomationSecurity
@@ -1308,7 +1344,13 @@ SZ:Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256
 User
 Software\Policies\Microsoft\VBA\Security
 LoadControlsInForms
-DELETE
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Macro Runtime Scan Scope - Enable for all documents
+User
+Software\Policies\Microsoft\Office\16.0\Common\Security
+MacroRuntimeScanScope
+DWORD:2
 
 ; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files - Enabled
 User
@@ -1334,7 +1376,7 @@ Software\Policies\Microsoft\Office\Common\Smart Tag
 NeverLoadManifests
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Account Settings\Exchange\Authentication with Exchange Server - Enabled: Kerberos Password Authentication
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Account Settings\Exchange\Authentication with Exchange Server - Kerberos Password Authentication
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 AuthenticationService
@@ -1364,7 +1406,13 @@ Software\Policies\Microsoft\Office\16.0\Outlook\Options\General
 MSGFormat
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Allow Active X One Off Forms - Enabled: Load only Outlook Controls
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Outlook Options\Preferences\Junk E-mail\Junk E-mail protection level - High
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Options\Mail
+JunkMailProtection
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Allow Active X One Off Forms - Load only Outlook Controls
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 AllowActiveXOneOffForms
@@ -1382,7 +1430,13 @@ Software\Policies\Microsoft\Office\16.0\Outlook\Options\Mail
 Internet
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Cryptography\Minimum encryption settings - Enabled: 168 bits
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Cryptography\Do not display 'Publish to GAL' button - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PublishToGALDisabled
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Cryptography\Minimum encryption settings - 168 bits
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 MinEncKey
@@ -1418,17 +1472,17 @@ Software\Policies\Microsoft\Office\16.0\Outlook\Security
 ShowLevel1Attach
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Remove file extensions blocked as Level 1 - Disabled
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Remove file extensions blocked as Level 1 - Enabled
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 FileExtensionsRemoveLevel1
-DELETE
+SZ:;
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Remove file extensions blocked as Level 2 - Disabled
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Remove file extensions blocked as Level 2 - Enabled
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 FileExtensionsRemoveLevel2
-DELETE
+SZ:;
 
 ; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Custom Form Security\Allow scripts in one-off Outlook forms - Disabled
 User
@@ -1436,53 +1490,47 @@ Software\Policies\Microsoft\Office\16.0\Outlook\Security
 EnableOneOffFormScripts
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Custom Form Security\Set Outlook object model custom actions execution prompt - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Custom Form Security\Set Outlook object model custom actions execution prompt - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMCustomAction
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when accessing an address book - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when accessing an address book - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMAddressBookAccess
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt When accessing the Formula property of a UserProperty object - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt When accessing the Formula property of a UserProperty object - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMFormulaAccess
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when executing Save As - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when executing Save As - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMSaveAs
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when reading address information - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when reading address information - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMAddressInformationAccess
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when responding to meeting and task requests - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when responding to meeting and task requests - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMMeetingTaskRequestResponse
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when sending mail - Enabled: Automatically Deny
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when sending mail - Automatically Deny
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 PromptOOMSend
 DWORD:0
-
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Trusted Add-ins\Configure trusted add-ins - Disabled
-User
-Software\Policies\Microsoft\Office\16.0\Outlook\Security\TrustedAddIns
-(Default)
-SZ:
 
 ; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Trust Center\Allow hyperlinks in suspected phishing e-mail messages - Disabled
 User
@@ -1490,19 +1538,19 @@ Software\Policies\Microsoft\Office\16.0\Outlook\Options\Mail
 JunkMailEnableLinks
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Trust Center\Security setting for macros - Enabled: Warn for signed, disable unsigned
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Trust Center\Security setting for macros - Warn for signed, disable unsigned
 User
 Software\Policies\Microsoft\Office\16.0\Outlook\Security
 Level
 DWORD:3
 
-; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Run Programs - Enabled: Disable (don't run any programs)
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Run Programs - Disable (don't run any programs)
 User
 Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
 RunPrograms
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Scan encrypted macros in PowerPoint Open XML presentations - Enabled: Scan encrypted macros (default)
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Scan encrypted macros in PowerPoint Open XML presentations - Scan encrypted macros (default)
 User
 Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
 PowerPointBypassEncryptedMacroScan
@@ -1526,19 +1574,19 @@ Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\VBA Macro Notification Settings - Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
 VBAWarnings
 DWORD:3
 
-; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\File Block Settings\PowerPoint beta converters - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\File Block Settings\PowerPoint 97-2003 presentations, shows, templates and add-in files - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileBlock
-PowerPoint12BetaFilesFromConverters
+BinaryFiles
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\File Block Settings\Set default file block behavior - Enabled: Blocked files are not opened
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\File Block Settings\Set default file block behavior - Blocked files are not opened
 User
 Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileBlock
 OpenInProtectedView
@@ -1556,7 +1604,7 @@ Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\ProtectedView
 DisableUnsafeLocationsInPV
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Enabled: Open in Protected View" and Unchecked for "Do not allow edit"
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Open in Protected View" and Unchecked for "Do not allow edit"
 User
 Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileValidation
 OpenInProtectedView
@@ -1591,13 +1639,13 @@ Software\Policies\Microsoft\Office\16.0\MS Project\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Project 2016\Project Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft Project 2016\Project Options\Security\Trust Center\VBA Macro Notification Settings - Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\MS Project\Security
 VBAWarnings
 DWORD:3
 
-; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Publisher Automation Security Level - Enabled: By UI
+; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Publisher Automation Security Level - By UI
 User
 Software\Policies\Microsoft\Office\Common\Security
 AutomationSecurityPublisher
@@ -1609,7 +1657,7 @@ Software\Policies\Microsoft\Office\16.0\Publisher\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Trust Center\VBA Macro Notification Settings - Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\Publisher\Security
 VBAWarnings
@@ -1633,11 +1681,29 @@ Software\Policies\Microsoft\Office\16.0\Visio\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\VBA Macro Notification Settings\Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\VBA Macro Notification Settings\Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\Visio\Security
 VBAWarnings
 DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\File Block Settings\Visio 2000-2002 Binary Drawings, Templates and Stencils - Open/Save blocked
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security\FileBlock
+Visio2000Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\File Block Settings\Visio 2003-2010 Binary Drawings, Templates and Stencils - Open/Save blocked
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security\FileBlock
+Visio2003Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\File Block Settings\Visio 5.0 or earlier Binary Drawings, Templates and Stencils - Open/Save blocked
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security\FileBlock
+Visio50AndEarlierFiles
+DWORD:2
 
 ; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Turn off file validation - Disabled
 User
@@ -1657,46 +1723,70 @@ Software\Policies\Microsoft\Office\16.0\Word\Security
 NoTBPromptUnsignedAddIn
 DWORD:1
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Scan encrypted macros in Word Open XML documents - Enabled: Scan encrypted macros (default)
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Scan encrypted macros in Word Open XML documents - Scan encrypted macros (default)
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security
 WordBypassEncryptedMacroScan
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\VBA Macro Notification Settings - Disable all except digitally signed macros
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security
 VBAWarnings
 DWORD:3
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Set default file block behavior - Enabled: Blocked files are not opened
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Set default file block behavior - Blocked files are not opened
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
 OpenInProtectedView
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 2 and earlier binary documents and templates - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 2 and earlier binary documents and templates - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
 Word2Files
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 6.0 binary documents and templates - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 2000 binary documents and templates - Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word2000Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 2003 binary documents and templates - Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word2003Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 2007 and later binary documents and templates - Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word2007Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 6.0 binary documents and templates - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
 Word60Files
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 95 binary documents and templates - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 95 binary documents and templates - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
 Word95Files
 DWORD:2
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 97 binary documents and templates - Enabled: Open/Save blocked, use open policy
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 97 binary documents and templates - Open/Save blocked, use open policy
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
 Word97Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word XP binary documents and templates - Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+WordXPFiles
 DWORD:2
 
 ; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Do not open files from the Internet zone in Protected View - Disabled
@@ -1711,7 +1801,7 @@ Software\Policies\Microsoft\Office\16.0\Word\Security\ProtectedView
 DisableUnsafeLocationsInPV
 DWORD:0
 
-; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Enabled: Open in Protected View" and Unchecked for "Do not allow edit"
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Open in Protected View" and Unchecked for "Do not allow edit"
 User
 Software\Policies\Microsoft\Office\16.0\Word\Security\FileValidation
 OpenInProtectedView

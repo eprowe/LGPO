@@ -1,0 +1,5 @@
+In order for this file to work you need to download the Administrative Template files for Office.  They are available here: https://www.microsoft.com/en-us/download/details.aspx?id=49030
+
+The downloadable EXE is a self-extracting archive.  Extract the contents and copy the ADMX and ADML files to %Windir%\PolicyDefinitions and %Windir%\PolicyDefinitions\en-US, respectively.
+
+This LGPO file also assumes you have the additional MS Security Guide ADMX/ADML template copied to %windir%\PolicyDefinitions and %windir%\PolicyDefinitions\en-US as well.  These additional files are required to block Flash activation in Office documents.  These templates are located within any of the Windows Security Baselines available as a part of the Microsoft Security Compliance Toolkit 1.0 available here: https://www.microsoft.com/en-us/download/details.aspx?id=55319
