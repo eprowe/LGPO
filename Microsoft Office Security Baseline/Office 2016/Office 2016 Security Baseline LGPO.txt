@@ -1,0 +1,1735 @@
+; Text file to be used in combination with LGPO.exe to easily import Local Group Policies
+; These policies are from Microsoft's Security Baseline and listed in the order they appear in the associated Excel spreadsheet
+; Download LGPO from here: https://www.microsoft.com/en-us/download/details.aspx?id=55319
+
+;----------Begin Computer Configuration Local Group Policy----------
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Add-on Management - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+mspub.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+powerpnt.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+pptview.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+visio.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+winproj.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+winword.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+outlook.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+spdesign.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+exprwd.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+msaccess.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+onenote.exe
+DWORD:1
+
+COMPUTER
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ADDON_MANAGEMENT
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Consistent Mime Handling - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Disable user name and password - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Information Bar - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Local Machine Zone Lockdown Security - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Mime Sniffing Safety Feature - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Navigate URL - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_VALIDATE_NAVIGATE_URL
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Object Caching Protection - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_OBJECT_CACHING
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Protection From Zone Elevation - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Restrict ActiveX Install - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Restrict File Download - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Restrict File Download - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_UNC_SAVEDFILECHECK
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Office 2016 (Machine)\Security Settings\IE Security\Scripted Window Security Restrictions - Enabled
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+groove.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+excel.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+mspub.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+powerpnt.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+pptview.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+visio.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+winproj.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+winword.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+outlook.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+spdesign.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+exprwd.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+msaccess.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+onenote.exe
+DWORD:1
+
+Computer
+Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+mse7.exe
+DWORD:1
+
+; Computer Configuration\Administrative Templates\MS Security Guide\Block Flash activation in Office documents - Enabled: Block all activation
+Computer
+Software\Microsoft\Office\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+Software\Microsoft\Office\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+Software\Microsoft\Office\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\Microsoft\Office\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB6E-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+ActivationFilterOverride
+DWORD:0
+
+Computer
+SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Common\COM Compatibility\{D27CDB70-AE6D-11CF-96B8-444553540000}
+Compatibility Flags
+DWORD:1024
+
+Computer
+SOFTWARE\Microsoft\Office\Common\COM Compatibility
+Comment
+SZ:Block all Flash activation
+
+; Computer Configuration\Administrative Templates\Skype for Business 2016\Microsoft Lync Feature Policies\Configure SIP security mode - Enabled
+Computer
+Software\Policies\Microsoft\Office\16.0\Lync
+EnableSIPHighSecurityMode
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Skype for Business 2016\Microsoft Lync Feature Policies\Disable HTTP fallback for SIP connection - Enabled
+Computer
+Software\Policies\Microsoft\Office\16.0\Lync
+DisableHTTPConnect
+DWORD:1
+
+;----------Begin User Configuration Local Group Policy----------
+; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Access\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\Access\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Access 2016\Application Settings\Security\Trust Center\Trusted Locations\Allow Trusted Locations on the network - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Access\Security\Trusted Locations
+AllowNetworkLocations
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Data Recovery\Do not show data extraction options when opening corrupt workbooks - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Options\
+ExtractDataDisableUI
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Advanced\Ask to update automatic links - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Options\BinaryOptions
+fUpdateEXT_78_1
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Advanced\Web Options...\General\Load pictures from Web pages not created in Excel - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Internet
+DoNotLoadPictures
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Save\Disable AutoRepublish - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Options
+DisableAutoRepublish
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Save\Do not show AutoRepublish warning alert - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Options
+DisableAutoRepublishWarning
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Force file extension to match file type - Enabled: Always match file type
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security
+ExtensionHardening
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Scan encrypted macros in Excel Open XML workbooks - Enabled: Scan encrypted macros (default)
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security
+ExcelBypassEncryptedMacroScan
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Turn off file validation - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileValidation
+EnableOnLoad
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\WEBSERVICE Function Notification Settings - Enabled: Disable all with notification
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security
+WebServiceFunctionWarnings
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Block macros from running in Office files from the Internet - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security
+BlockContentExecutionFromInternet
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\dBase III / IV files - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+dBaseFiles
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Dif and Sylk files - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+DifandSylkFiles
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 2 macrosheets and add-in files - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl2Macros
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 2 worksheets - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl2Worksheets
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 3 macrosheets and add-in files - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl3Macros
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 3 worksheets - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl3Worksheets
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 macrosheets and add-in files - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl4Macros
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 workbooks - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl4Workbooks
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 4 worksheets - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl4Worksheets
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 95 workbooks - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl95Workbooks
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Excel 95-97 workbooks and templates - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+xl9597WorkbooksAndTemplates
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Set default file block behavior - Enabled: Blocked files are not opened
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+OpenInProtectedView
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\File Block Settings\Web pages and Excel 2003 XML spreadsheets - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileBlock
+HTMLAndXMLSSFiles
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Do not open files from the Internet zone in Protected View - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\ProtectedView
+DisableInternetFilesInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Do not open files in unsafe locations in Protected View - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\ProtectedView
+DisableUnsafeLocationsInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Enabled: Open in Protected View and Unchecked for "Do not allow edit"
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileValidation
+OpenInProtectedView
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\FileValidation
+DisableEditFromPV
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Protected View\Turn off Protected View for attachments opened from Outlook - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\ProtectedView
+DisableAttachmentsInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Excel 2016\Excel Options\Security\Trust Center\Trusted Locations\Allow Trusted Locations on the network - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Excel\Security\Trusted Locations
+AllowNetworkLocations
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Global Options\Customize\Disable UI extending from documents and templates - Enabled: Disallow in Word; Excel; PowerPoint; Acceess; Outlook; Publisher; Project; Visio, InfoPath
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Word
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Excel
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\PowerPoint
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Access
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Outlook
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Publisher
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Project
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\Visio
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Common\Toolbars\InfoPath
+NoExtensibilityCustomizationFromDocument
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\ActiveX Control Initialization - Disabled
+User
+Software\Policies\Microsoft\Office\Common\Security
+UFIControls
+DELETE
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security - Enabled: Use application macro security level
+User
+Software\Policies\Microsoft\Office\Common\Security
+AutomationSecurity
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Disable all Trust Bar notifications for security issues - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Common\trustcenter
+TrustBar
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office 97-2003 files - Enabled (Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256)
+User
+Software\Policies\Microsoft\Office\16.0\Common\Security
+DefaultEncryption12
+SZ:Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office Open XML files - Enabled (Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256)
+User
+Software\Policies\Microsoft\Office\16.0\Common\Security
+OpenXMLEncryption
+SZ:Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Load Controls in Forms3 - Disabled
+User
+Software\Policies\Microsoft\VBA\Security
+LoadControlsInForms
+DELETE
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Common\Security
+DRMEncryptProperty
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Allow mix of policy and user locations - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Common\Security\Trusted Locations
+Allow User Locations
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Server Settings\Disable the Office client from polling the SharePoint Server for published links - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Common\Portal
+LinkPublishingDisabled
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Office 2016\Smart Documents (Word Excel)\Disable Smart Document's use of manifests - Enabled
+User
+Software\Policies\Microsoft\Office\Common\Smart Tag
+NeverLoadManifests
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Account Settings\Exchange\Authentication with Exchange Server - Enabled: Kerberos Password Authentication
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+AuthenticationService
+DWORD:16
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Account Settings\Exchange\Enable RPC encryption - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\RPC
+EnableRPCEncryption
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Outlook Options\Other\Advanced\Do not allow Outlook object model scripts to run for public folders - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PublicFolderScript
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Outlook Options\Other\Advanced\Do not allow Outlook object model scripts to run for shared folders - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+SharedFolderScript
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Outlook Options\Other\Advanced\Use Unicode format when dragging e-mail message to file system - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Options\General
+MSGFormat
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Allow Active X One Off Forms - Enabled: Load only Outlook Controls
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+AllowActiveXOneOffForms
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Prevent users from customizing attachment security settings - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook
+DisallowAttachmentCustomization
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Automatic Picture Download Settings\Include Internet in Safe Zones for Automatic Picture Download - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Options\Mail
+Internet
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Cryptography\Minimum encryption settings - Enabled: 168 bits
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+MinEncKey
+DWORD:168
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Cryptography\Signature Warning - Enabled (Always warn about invalid signatures)
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+WarnAboutInvalid
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Cryptography\Signature Status dialog box\Retrieving CRLs (Certificate Revocation Lists) - Enabled (When online always retrieve the CRL)
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+UseCRLChasing
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Outlook Security Mode - Enabled (Use Outlook Security Group Policy)
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+AdminSecurityMode
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Allow users to demote attachments to Level 2 - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+AllowUsersToLowerAttachments
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Display Level 1 attachments - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+ShowLevel1Attach
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Remove file extensions blocked as Level 1 - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+FileExtensionsRemoveLevel1
+DELETE
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Attachment Security\Remove file extensions blocked as Level 2 - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+FileExtensionsRemoveLevel2
+DELETE
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Custom Form Security\Allow scripts in one-off Outlook forms - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+EnableOneOffFormScripts
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Custom Form Security\Set Outlook object model custom actions execution prompt - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMCustomAction
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when accessing an address book - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMAddressBookAccess
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt When accessing the Formula property of a UserProperty object - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMFormulaAccess
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when executing Save As - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMSaveAs
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when reading address information - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMAddressInformationAccess
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when responding to meeting and task requests - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMMeetingTaskRequestResponse
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Configure Outlook object model prompt when sending mail - Enabled: Automatically Deny
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+PromptOOMSend
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Security Form Settings\Programmatic Security\Trusted Add-ins\Configure trusted add-ins - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security\TrustedAddIns
+(Default)
+SZ:
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Trust Center\Allow hyperlinks in suspected phishing e-mail messages - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Options\Mail
+JunkMailEnableLinks
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Outlook 2016\Security\Trust Center\Security setting for macros - Enabled: Warn for signed, disable unsigned
+User
+Software\Policies\Microsoft\Office\16.0\Outlook\Security
+Level
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Run Programs - Enabled: Disable (don't run any programs)
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
+RunPrograms
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Scan encrypted macros in PowerPoint Open XML presentations - Enabled: Scan encrypted macros (default)
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
+PowerPointBypassEncryptedMacroScan
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Turn off file validation - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileValidation
+EnableOnLoad
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Block macros from running in Office files from the Internet - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
+BlockContentExecutionFromInternet
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\File Block Settings\PowerPoint beta converters - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileBlock
+PowerPoint12BetaFilesFromConverters
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\File Block Settings\Set default file block behavior - Enabled: Blocked files are not opened
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileBlock
+OpenInProtectedView
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Protected View\Do not open files from the Internet zone in Protected View - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\ProtectedView
+DisableInternetFilesInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Protected View\Do not open files in unsafe locations in Protected View - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\ProtectedView
+DisableUnsafeLocationsInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Enabled: Open in Protected View" and Unchecked for "Do not allow edit"
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileValidation
+OpenInProtectedView
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\FileValidation
+DisableEditFromPV
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Protected View\Turn off Protected View for attachments opened from Outlook - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\ProtectedView
+DisableAttachmentsInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft PowerPoint 2016\PowerPoint Options\Security\Trust Center\Trusted Locations\Allow Trusted Locations on the network - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\PowerPoint\Security\Trusted Locations
+AllowNetworkLocations
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Project 2016\Project Options\Security\Trust Center\Allow Trusted Locations on the network - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\MS Project\Security\Trusted Locations
+AllowNetworkLocations
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Project 2016\Project Options\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\MS Project\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Project 2016\Project Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\MS Project\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Publisher Automation Security Level - Enabled: By UI
+User
+Software\Policies\Microsoft\Office\Common\Security
+AutomationSecurityPublisher
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Publisher\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Publisher 2016\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\Publisher\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\Allow Trusted Locations on the network - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security\Trusted Locations
+AllowNetworkLocations
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\Block macros from running in Office files from the Internet - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security
+BlockContentExecutionFromInternet
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Visio 2016\Visio Options\Security\Trust Center\VBA Macro Notification Settings\Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\Visio\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Turn off file validation - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileValidation
+EnableOnLoad
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Block macros from running in Office files from the Internet - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security
+BlockContentExecutionFromInternet
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Disable Trust Bar Notification for unsigned application add-ins and block them - Enabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security
+NoTBPromptUnsignedAddIn
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Scan encrypted macros in Word Open XML documents - Enabled: Scan encrypted macros (default)
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security
+WordBypassEncryptedMacroScan
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\VBA Macro Notification Settings - Enabled: Disable all except digitally signed macros
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security
+VBAWarnings
+DWORD:3
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Set default file block behavior - Enabled: Blocked files are not opened
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+OpenInProtectedView
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 2 and earlier binary documents and templates - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word2Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 6.0 binary documents and templates - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word60Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 95 binary documents and templates - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word95Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\File Block Settings\Word 97 binary documents and templates - Enabled: Open/Save blocked, use open policy
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileBlock
+Word97Files
+DWORD:2
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Do not open files from the Internet zone in Protected View - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\ProtectedView
+DisableInternetFilesInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Do not open files in unsafe locations in Protected View - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\ProtectedView
+DisableUnsafeLocationsInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Set document behavior if file validation fails - Enabled: Open in Protected View" and Unchecked for "Do not allow edit"
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileValidation
+OpenInProtectedView
+DWORD:1
+
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\FileValidation
+DisableEditFromPV
+DWORD:1
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Protected View\Turn off Protected View for attachments opened from Outlook - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\ProtectedView
+DisableAttachmentsInPV
+DWORD:0
+
+; User Configuration\Administrative Templates\Microsoft Word 2016\Word Options\Security\Trust Center\Trusted Locations\Allow Trusted Locations on the network - Disabled
+User
+Software\Policies\Microsoft\Office\16.0\Word\Security\Trusted Locations
+AllowNetworkLocations
+DWORD:0
