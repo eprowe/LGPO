@@ -1,0 +1,1469 @@
+; Text file to be used in combination with LGPO.exe to easily import Local Group Policies
+; These policies are from Microsoft's Security Baseline and listed in the order they appear in the associated Excel spreadsheet
+; Download LGPO from here: https://www.microsoft.com/en-us/download/details.aspx?id=55319
+
+;----------Begin Computer Configuration Local Group Policy----------
+; Computer Configuration\Administrative Templates\Control Panel\Personalization\Prevent enabling lock screen camera - Enabled
+Computer
+Software\Policies\Microsoft\Windows\Personalization
+NoLockScreenCamera
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Control Panel\Personalization\Prevent enabling lock screen slide show - Enabled
+Computer
+Software\Policies\Microsoft\Windows\Personalization
+NoLockScreenSlideshow
+DWORD:1
+
+;----------LAPS Template settings----------
+; Computer Configuration\Administrative Templates\LAPS\Enable local admin password management - Enabled
+Computer
+Software\Policies\Microsoft Services\AdmPwd
+AdmPwdEnabled
+DWORD:1
+
+;----------MS Security Guide Template settings----------
+; Computer Configuration\Administrative Templates\MS Security Guide\Apply UAC restrictions to local accounts on network logons - Enabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+LocalAccountTokenFilterPolicy
+DWORD:0
+
+; Computer Configuration\Administrative Templates\MS Security Guide\Configure SMB v1 client driver - Disable driver (recommended)
+Computer
+System\CurrentControlSet\Services\MrxSmb10
+Start
+DWORD:4
+
+; Computer Configuration\Administrative Templates\MS Security Guide\Configure SMB v1 server - Disabled
+Computer
+System\CurrentControlSet\Services\LanmanServer\Parameters
+SMB1
+DWORD:0
+
+; Computer Configuration\Administrative Templates\MS Security Guide\Enable Structured Exception Handling Overwrite Protection (SEHOP) - Enabled
+Computer
+System\CurrentControlSet\Control\Session Manager\kernel
+DisableExceptionChainValidation
+DWORD:0
+
+; Computer Configuration\Administrative Templates\MS Security Guide\NetBT NodeType configuration - P-node
+Computer
+System\CurrentControlSet\Services\NetBT\Parameters
+NodeType
+DWORD:2
+
+; Computer Configuration\Administrative Templates\MS Security Guide\WDigest Authentication (disabling may require KB2871997) - Disabled
+Computer
+System\CurrentControlSet\Control\SecurityProviders\WDigest
+UseLogonCredential
+DWORD:0
+
+;----------MSS (Legacy) Template settings----------
+; Computer Configuration\Administrative Templates\MSS (Legacy)\MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing) - Highest protection, source routing is completely disabled
+Computer
+System\CurrentControlSet\Services\Tcpip6\Parameters
+DisableIPSourceRouting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\MSS (Legacy)\MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing) - Highest protection, source routing is completely disabled=
+Computer
+System\CurrentControlSet\Services\Tcpip\Parameters
+DisableIPSourceRouting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\MSS (Legacy)\MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes - Disabled
+Computer
+System\CurrentControlSet\Services\Tcpip\Parameters
+EnableICMPRedirect
+DWORD:0
+
+; Computer Configuration\Administrative Templates\MSS (Legacy)\MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers - Enabled
+Computer
+System\CurrentControlSet\Services\Netbt\Parameters
+NoNameReleaseOnDemand
+DWORD:1
+
+;----------Computer Configuration Local Group Policy----------
+; Computer Configuration\Administrative Templates\Network\DNS Client\Turn off multicast name resolution - Enabled
+Computer
+Software\Policies\Microsoft\Windows NT\DNSClient
+EnableMulticast
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Network\Lanman Workstation\Enable insecure guest logons - Disabled
+Computer
+Software\Policies\Microsoft\Windows\LanmanWorkstation
+AllowInsecureGuestAuth
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Network\Network Connections\Prohibit use of Internet Connection Sharing on your DNS domain network - Enabled
+Computer
+Software\Policies\Microsoft\Windows\Network Connections
+NC_ShowSharedAccessUI
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Network\Network Provider\Hardened UNC Paths - Enabled
+;    "\\*\SYSVOL = RequireMutualAuthentication=1,RequireIntegrity=1
+Computer
+Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths
+\\*\SYSVOL
+SZ:RequireMutualAuthentication=1,RequireIntegrity=1
+
+; Computer Configuration\Administrative Templates\Network\Network Provider\Hardened UNC Paths - Enabled
+;    \\*\NETLOGON = RequireMutualAuthentication=1,RequireIntegrity=1"
+Computer
+Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths
+\\*\NETLOGON
+SZ:RequireMutualAuthentication=1,RequireIntegrity=1
+
+; Computer Configuration\Administrative Templates\Network\Windows Connection Manager - Prohibit connection to non-domain networks when connected to domain authenticated network - Enabled
+Computer
+Software\Policies\Microsoft\Windows\WcmSvc\GroupPolicy
+fBlockNonDomain
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Network\WLAN Service\WLAN Settings\Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services - Disabled
+Computer
+Software\Microsoft\wcmsvc\wifinetworkmanager\config
+AutoConnectAllowedOEM
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Credentials Delegation\Encryption Oracle Remediation - Force Updated Clients
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters
+AllowEncryptionOracle
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Credentials Delegation\Remote host allows delegation of non-exportable credentials - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CredentialsDelegation
+AllowProtectedCreds
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Device Guard\Turn On Virtualization Based Security - Enabled
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+EnableVirtualizationBasedSecurity
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+RequirePlatformSecurityFeatures
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+HypervisorEnforcedCodeIntegrity
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+HVCIMATRequired
+DWORD:0
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+LsaCfgFlags
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
+ConfigureSystemGuardLaunch
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Device Installation\Device Installation Restrictions\Prevent installation of devices that match any of these device IDs - Enabled
+Computer
+Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions
+DenyDeviceIDs
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions
+DenyDeviceIDsRetroactive
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions\DenyDeviceIDs
+1
+SZ:PCI\CC_0C0A
+
+; Computer Configuration\Administrative Templates\System\Device Installation\Device Installation Restrictions\Prevent installation of devices using drivers that match these device setup classes - Enabled
+Computer
+Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions
+DenyDeviceClasses
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions
+DenyDeviceClassesRetroactive
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions\DenyDeviceClasses
+1
+SZ:{d48179be-ec20-11d1-b6b8-00c04fa372a7}
+
+; Computer Configuration\Administrative Templates\System\Early Launch Antimalware\Boot-Start Driver Initialization Policy - Good, unknown and bad but critical
+Computer
+System\CurrentControlSet\Policies\EarlyLaunch
+DriverLoadPolicy
+DWORD:3
+
+; Computer Configuration\Administrative Templates\System\Group Policy\Configure registry policy processing, Do not apply during periodic background processing = False"
+Computer
+Software\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}
+NoBackgroundPolicy
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Group Policy\Configure registry policy processing, Process even if the Group Policy objects have not changed = True
+Computer
+Software\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}
+NoGPOListChanges
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Internet Communication Management\Internet Communication settings\Turn off downloading of print drivers over HTTP - Enabled
+Computer
+Software\Policies\Microsoft\Windows NT\Printers
+DisableWebPnPDownload
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Internet Communication Management\Internet Communication settings\Turn off Internet download for Web publishing and online ordering wizards - Enabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoWebServices
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Kernel DMA Protection\Enumeration policy for external devices incompatible with Kernel DMA Protection - Block All
+Computer
+Software\Policies\Microsoft\Windows\Kernel DMA Protection
+DeviceEnumerationPolicy
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Logon\Enumerate local users on domain-joined computers - Disabled
+Computer
+Software\Policies\Microsoft\Windows\System
+EnumerateLocalUsers
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Logon\Turn on convenience PIN sign-in - Disabled
+Computer
+Software\Policies\Microsoft\Windows\System
+AllowDomainPINLogon
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Power Management\Sleep Settings\Allow standby states (S1-S3) when sleeping (on battery) - Disabled
+Computer
+Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab
+DCSettingIndex
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Power Management\Sleep Settings\Allow standby states (S1-S3) when sleeping (plugged in) - Disabled
+Computer
+Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab
+ACSettingIndex
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Power Management\Sleep Settings\Require a password when a computer wakes (on battery) - Enabled
+Computer
+Software\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51
+DCSettingIndex
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Power Management\Sleep Settings\Require a password when a computer wakes (plugged in) - Enabled
+Computer
+Software\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51
+ACSettingIndex
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Remote Assistance\Configure Solicited Remote Assistance - Disabled
+Computer
+Software\policies\Microsoft\Windows NT\Terminal Services
+fAllowToGetHelp
+DWORD:0
+
+; Computer Configuration\Administrative Templates\System\Remote Procedure Call\Restrict Unauthenticated RPC clients - Authenticated
+Computer
+Software\Policies\Microsoft\Windows NT\Rpc
+RestrictRemoteClients
+DWORD:1
+
+; Computer Configuration\Administrative Templates\System\Service Control Manager Settings\Security Settings\Enable svchost.exe mitigation options - Enabled
+Computer
+System\CurrentControlSet\Control\SCMConfig
+EnableSvchostMitigationPolicy
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\App Privacy\Let Windows apps activate with voice while the system is locked - Force Deny
+Computer
+Software\Policies\Microsoft\Windows\AppPrivacy
+LetAppsActivateWithVoiceAboveLock
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Windows Components\App runtime\Allow Microsoft accounts to be optional - Enabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+MSAOptional
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\AutoPlay Policies\Disallow Autoplay for non-volume devices - Enabled
+Computer
+Software\Policies\Microsoft\Windows\Explorer
+NoAutoplayfornonVolume
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\AutoPlay Policies\Set the default behavior for AutoRun - Do not execute any autorun commands
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoAutorun
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\AutoPlay Policies\Turn off Autoplay - All drives
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoDriveTypeAutoRun
+DWORD:255
+
+; Computer Configuration\Administrative Templates\Windows Components\Biometrics\Facial Features\Configure enhanced anti-spoofing - Enabled
+Computer
+Software\Policies\Microsoft\Biometrics\FacialFeatures
+EnhancedAntiSpoofing
+DWORD:1
+
+; Computer Configuration\Administrative Tempaltes\Windows Components\BitLocker Drive Encryption\Disable new DMA devices when this computer is locked - Enabled
+Computer
+Software\Policies\Microsoft\FVE
+DisableExternalDMAUnderLock
+DWORD:1
+
+; Computer Configuration\Administrative Tempaltes\Windows Components\BitLocker Drive Encryption\Operating System Drives\Allow enhanced PINs for startup - Enabled
+Computer
+Software\Policies\Microsoft\FVE
+UseEnhancedPin
+DWORD:1
+
+; Computer Configuration\Administrative Tempaltes\Windows Components\BitLocker Drive Encryption\Removable Data Drives\Deny write access to removable drives not protected by BitLocker - Enabled
+Computer
+System\CurrentControlSet\Policies\Microsoft\FVE
+RDVDenyWriteAccess
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\FVE
+RDVDenyCrossOrg
+DWORD:0
+
+; Computer Configuration\Administrative Tempaltes\Windows Components\Cloud Content\Turn off Microsoft consumer experiences - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CloudContent
+DisableWindowsConsumerFeatures
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Credential User Interface\Enumerate administrator accounts on elevation - Disabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\CredUI
+EnumerateAdministrators
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Event Log Service\Application\Specify the maximum log file size (KB) - 32768
+Computer
+Software\Policies\Microsoft\Windows\EventLog\Application
+MaxSize
+DWORD:32768
+
+; Computer Configuration\Administrative Templates\Windows Components\Event Log Service\Security\Specify the maximum log file size (KB) - 196608
+Computer
+Software\Policies\Microsoft\Windows\EventLog\Security
+MaxSize
+DWORD:196608
+
+; Computer Configuration\Administrative Templates\Windows Components\Event Log Service\System\Specify the maximum log file size (KB) - 32768
+Computer
+Software\Policies\Microsoft\Windows\EventLog\System
+MaxSize
+DWORD:32768
+
+; Computer Configuration\Administrative Templates\Windows Components\File Explorer\Configure Windows Defender SmartScreen - Enabled
+Computer
+Software\Policies\Microsoft\Windows\System
+EnableSmartScreen
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\System
+ShellSmartScreenLevel
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Prevent bypassing SmartScreen Filter warnings - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\PhishingFilter
+PreventOverride
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\PhishingFilter
+PreventOverrideAppRepUnknown
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Prevent managing SmartScreen Filter - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\PhishingFilter
+EnabledV9
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Prevent per-user installation of ActiveX controls - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Security\ActiveX
+BlockNonAdminActiveXInstall
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Zones: Do not allow users to add/delete sites - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+Security_zones_map_edit
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Zones: Do not allow users to change policies - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+Security_options_edit
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Zones: Use only machine settings - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+Security_HKLM_only
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Specify use of ActiveX Installer Service for installation of ActiveX controls - Enabled
+Computer
+Software\Policies\Microsoft\Windows\AxInstaller
+OnlyUseAXISForActiveXInstall
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Turn off Crash Detection - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Restrictions
+NoCrashDetection
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Turn off the Security Settings Check feature - Disabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Security
+DisableSecuritySettingsCheck
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Prevent ignoring certificate errors - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+PreventIgnoreCertErrors
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Allow software to run or install even if the signature is invalid - Disabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Download
+RunInvalidSignatures
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Check for server certificate revocation - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+CertificateRevocation
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Check for signatures on downloaded programs - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Download
+CheckExeSignatures
+SZ:Yes
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Do not allow ActiveX controls to run in Protected Mode when Enhanced Protected Mode is enabled - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main
+DisableEPMCompat
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Turn off encryption support - Use TLS 1.1 and TLS 1.2
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+SecureProtocols
+DWORD:2560
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Turn on 64-bit tab processes when running in Enhanced Protected Mode on 64-bit versions of Windows - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main
+Isolation64Bit
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Advanced Page\Turn on Enhanced Protected Mode - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main
+Isolation
+SZ:PMEM
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Intranet Sites: Include all network paths (UNCs) - Disabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap
+UNCAsIntranet
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Turn on certificate address mismatch warning - Enabled
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+WarnOnBadCertRecving
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Access data sources across domains - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1406
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow cut, copy or paste operations from the clipboard via script - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1407
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow drag and drop or copy and paste files - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1802
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow loading of XAML files - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2402
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow only approved domains to use ActiveX controls without prompt - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+120b
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow only approved domains to use the TDC ActiveX control - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+120c
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow scripting of Internet Explorer WebBrowser controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1206
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow script-initiated windows without size or position constraints - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2102
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow scriptlets - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1209
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow updates to status bar via script - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2103
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Allow VBScript to run in Internet Explorer - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+140C
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Automatic prompting for file downloads - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2200
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Don't run antimalware programs against ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+270C
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Download signed ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1001
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Download unsigned ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1004
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Enable dragging of content from different domains across windows - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2709
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Enable dragging of content from different domains within a window - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2708
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Include local path when user is uploading files to a server - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+160A
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Initialize and script ActiveX controls not marked as safe - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1201
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Launching applications and files in an IFRAME - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1804
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Logon options - Prompt for user name and password
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1A00
+DWORD:65536
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Navigate windows and frames across different domains - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1607
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Run .NET Framework-reliant components not signed with Authenticode - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2004
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Run .NET Framework-reliant components signed with Authenticode - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2001
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Show security warning for potentially unsafe files - Prompt
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1806
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Turn on Cross-Site Scripting Filter - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1409
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Turn on Protected Mode - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2500
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Turn on SmartScreen Filter scan - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2301
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Use Pop-up Blocker - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1809
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Userdata persistence - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+1606
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Internet Zone\Web sites in less privileged Web content zones can navigate into this zone - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3
+2101
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Intranet Zone\Don't run antimalware programs against ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1
+270C
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Intranet Zone\Initialize and script ActiveX controls not marked as safe - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1
+1201
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Intranet Zone\Java permissions - High safety
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1
+1C00
+DWORD:65536
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Local Machine Zone\Don't run antimalware programs against ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0
+270C
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Local Machine Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Locked-Down Internet Zone\Turn on SmartScreen Filter scan - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\3
+2301
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Locked-Down Intranet Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\1
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Locked-Down Local Machine Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\0
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Locked-Down Restricted Sites Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\4
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Locked-Down Restricted Sites Zone\Turn on SmartScreen Filter scan - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\4
+2301
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Locked-Down Trusted Sites Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\2
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Access data sources across domains - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1406
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow active scripting - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1400
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow binary and script behaviors - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2000
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow cut, copy or paste operations from the clipboard via script - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1407
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow drag and drop or copy and paste files - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1802
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow file downloads - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1803
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow loading of XAML files - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2402
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow META REFRESH - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1608
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow only approved domains to use ActiveX controls without prompt - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+120b
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow only approved domains to use the TDC ActiveX control - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+120c
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow scripting of Internet Explorer WebBrowser controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1206
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow script-initiated windows without size or position constraints - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2102
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow scriptlets - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1209
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow updates to status bar via script - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2103
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Allow VBScript to run in Internet Explorer - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+140C
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Automatic prompting for file downloads - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2200
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Don't run antimalware programs against ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+270C
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Download signed ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1001
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Download unsigned ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1004
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Enable dragging of content from different domains across windows - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2709
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Enable dragging of content from different domains within a window - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2708
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Include local path when user is uploading files to a server - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+160A
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Initialize and script ActiveX controls not marked as safe - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1201
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Java permissions - Disable Java
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1C00
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Launching applications and files in an IFRAME - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1804
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Logon options - Anonymous logon
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1A00
+DWORD:196608
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Navigate windows and frames across different domains - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1607
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Run .NET Framework-reliant components not signed with Authenticode - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2004
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Run .NET Framework-reliant components signed with Authenticode - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2001
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Run ActiveX controls and plugins - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1200
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Script ActiveX controls marked safe for scripting - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1405
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Scripting of Java applets - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1402
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Show security warning for potentially unsafe files - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1806
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Turn on Cross-Site Scripting Filter - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1409
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Turn on Protected Mode - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2500
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Turn on SmartScreen Filter scan - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2301
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Use Pop-up Blocker - Enable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1809
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Userdata persistence - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+1606
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Restricted Sites Zone\Web sites in less privileged Web content zones can navigate into this zone - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4
+2101
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Trusted Sites Zone\Don't run antimalware programs against ActiveX controls - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2
+270C
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Trusted Sites Zone\Initialize and script ActiveX controls not marked as safe - Disable
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2
+1201
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel\Security Page\Trusted Sites Zone\Java permissions - High safety
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2
+1C00
+DWORD:65536
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Add-on Management\Remove "Run this time" button for outdated ActiveX controls in Internet Explorer - Enabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Ext
+RunThisTimeEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Add-on Management\Turn off blocking of outdated ActiveX controls for Internet Explorer - Disabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\Ext
+VersionCheckEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Allow fallback to SSL 3.0 (Internet Explorer) - No Sites
+Computer
+Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+EnableSSL3Fallback
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Consistent Mime Handling\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Mime Sniffing Safety Feature\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\MK Protocol Security Restriction\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Notification bar\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Protection From Zone Elevation\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Restrict ActiveX Install\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Restrict File Download\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Internet Explorer\Security Features\Scripted Window Security Restrictions\Internet Explorer Processes - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+(Reserved)
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+explorer.exe
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS
+iexplore.exe
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Microsoft Edge\Configure Password Manager - Disabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\Main
+FormSuggest Passwords
+SZ:No
+
+; Computer Configuration\Administrative Templates\Windows Components\Microsoft Edge\Configure Windows Defender SmartScreen - Enabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter
+EnabledV9
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Microsoft Edge\Prevent bypassing Windows Defender SmartScreen prompts for files - Enabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter
+PreventOverrideAppRepUnknown
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Microsoft Edge\Prevent bypassing Windows Defender SmartScreen prompts for sites - Enabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter
+PreventOverride
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Microsoft Edge\Prevent certificate error overrides - Enabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\Internet Settings
+PreventCertErrorOverrides
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Connection Client\Do not allow passwords to be saved - Enabled
+Computer
+Software\Policies\Microsoft\Windows NT\Terminal Services
+DisablePasswordSaving
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Device and Resource Redirection\Do not allow drive redirection - Enabled
+Computer
+SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+fDisableCdm
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Security\Always prompt for password upon connection - Enable
+Computer
+Software\Policies\Microsoft\Windows NT\Terminal Services
+fPromptForPassword
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Security\Require secure RPC communication - Enable
+Computer
+Software\Policies\Microsoft\Windows NT\Terminal Services
+fEncryptRPCTraffic
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Security\Set client connection encryption level - High Level
+Computer
+Software\Policies\Microsoft\Windows NT\Terminal Services
+MinEncryptionLevel
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Windows Components\RSS Feeds\Prevent downloading of enclosures - Enabled
+Computer
+Software\Policies\Microsoft\Internet Explorer\Feeds
+DisableEnclosureDownload
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Search\Allow indexing of encrypted files - Disabled
+Computer
+Software\Policies\Microsoft\Windows\Windows Search
+AllowIndexingEncryptedStoresOrItems
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\Configure detection for potentially unwanted applications - Block
+Computer
+Software\Policies\Microsoft\Windows Defender
+PUAProtection
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\MAPS\Join Microsoft MAPS - Advanced MAPS
+Computer
+Software\Policies\Microsoft\Windows Defender\Spynet
+SpynetReporting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\MAPS\Send file samples when further analysis is required - Send safe samples
+Computer
+Software\Policies\Microsoft\Windows Defender\Spynet
+SubmitSamplesConsent
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\Real-time Protection\Turn on behavior monitoring - Enabled
+Computer
+Software\Policies\Microsoft\Windows Defender\Real-Time Protection
+DisableBehaviorMonitoring
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\Scan\Scan removable drives - Enabled
+Computer
+Software\Policies\Microsoft\Windows Defender\Scan
+DisableRemovableDriveScanning
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\Windows Defender Exploit Guard\Attack Surface Reduction\Configure Attack Surface Reduction rules - Enabled
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR
+ExploitGuard_ASR_Rules
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+be9ba2d9-53ea-4cdc-84e5-9b1eeee46550
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+d4f940ab-401b-4efc-aadc-ad5f3c50688a
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+d3e037e1-3eb8-44c8-a917-57927947596d
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+5beb7efe-fd9a-4556-801d-275e5ffc04cc
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+3b576869-a4ec-4529-8536-b80a7769e899
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+26190899-1602-49e8-8b27-eb1d0a1ce869
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c
+SZ:1
+
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules
+75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84
+SZ:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\Windows Defender Exploit Guard\Network Protection\Prevent users and apps from accessing dangerous websites - Block
+Computer
+Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection
+EnableNetworkProtection
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender SmartScreen\Explorer\Configure Windows Defender SmartScreen - Enabled
+Computer
+Software\Policies\Microsoft\Windows\System
+EnableSmartScreen
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\System
+ShellSmartScreenLevel
+SZ:Block
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender SmartScreen\Microsoft Edge\Configure Windows Defender SmartScreen - Enabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter
+EnabledV9
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Defender SmartScreen\Microsoft Edge\Prevent bypassing Windows Defender SmartScreen prompts for sites - Enabled
+Computer
+Software\Policies\Microsoft\MicrosoftEdge\PhishingFilter
+PreventOverride
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Game Recording and Broadcasting\Enables or disables Windows Game Recording and Broadcasting - Disabled
+Computer
+Software\Policies\Microsoft\Windows\GameDVR
+AllowGameDVR
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Ink Workspace\Allow Windows Ink Workspace - On, but disallow access above lock
+Computer
+Software\Policies\Microsoft\WindowsInkWorkspace
+AllowWindowsInkWorkspace
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Installer\Allow user control over installs - Disabled
+Computer
+Software\Policies\Microsoft\Windows\Installer
+EnableUserControl
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Installer\Always install with elevated privileges - Disabled
+Computer
+Software\Policies\Microsoft\Windows\Installer
+AlwaysInstallElevated
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Logon Options\Sign-in and lock last interactive user automatically after a restart - Disabled
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+DisableAutomaticRestartSignOn
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell\Turn on PowerShell Script Block Logging - Enabled
+Computer
+Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+EnableScriptBlockLogging
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+EnableScriptBlockInvocationLogging
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Client\Allow Basic authentication - Disabled
+Computer
+Software\Policies\Microsoft\Windows\WinRM\Client
+AllowBasic
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Client\Allow unencrypted traffic - Disabled
+Computer
+Software\Policies\Microsoft\Windows\WinRM\Client
+AllowUnencryptedTraffic
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Client\Disallow Digest authentication - Enabled
+Computer
+Software\Policies\Microsoft\Windows\WinRM\Client
+AllowDigest
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Service\Allow Basic authentication - Disabled
+Computer
+Software\Policies\Microsoft\Windows\WinRM\Service
+AllowBasic
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Service\Allow unencrypted traffic - Disabled
+Computer
+Software\Policies\Microsoft\Windows\WinRM\Service
+AllowUnencryptedTraffic
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Service\Disallow WinRM from storing RunAs credentials - Enabled
+Computer
+Software\Policies\Microsoft\Windows\WinRM\Service
+DisableRunAs
+DWORD:1
+
+;----------Begin User Configuration Local Group Policy----------
+; User Configuration\Administrative Templates\Start Menu and Taskbar\Notifications\Turn off toast notifications on the lock screen - Enabled
+User
+Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications
+NoToastApplicationNotificationOnLockScreen
+DWORD:1
+
+; User Configuration\Administrative Templates\Windows Components\Cloud Content\Do not suggest third-party content in Windows spotlight - Enabled
+User
+Software\Policies\Microsoft\Windows\CloudContent
+DisableThirdPartySuggestions
+DWORD:1
+
+; User Configuration\Administrative Templates\Windows Components\Internet Explorer\Turn on the auto-complete feature for user names and passwords on forms - Disabled
+User
+Software\Policies\Microsoft\Internet Explorer\Control Panel
+FormSuggest Passwords
+DWORD:1
+
+User
+Software\Policies\Microsoft\Internet Explorer\Main
+FormSuggest Passwords
+SZ:No
+
+User
+Software\Policies\Microsoft\Internet Explorer\Main
+FormSuggest PW Ask
+SZ:No
