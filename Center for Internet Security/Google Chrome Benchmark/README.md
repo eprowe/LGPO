@@ -4,7 +4,7 @@ File was generated using template version 77.0.3865.120.  Some of the paths may 
 
 For example, "Configure remote access options" has been moved to "Remote access"
 
-Download Google Chrome Group Policy templates from here: https://www.chromium.org/administrators/policy-templates.  Download the Google Update templates as well.
+Download Google Chrome and Google Update Group Policy templates from here: https://www.chromium.org/administrators/policy-templates.
 
 Download LGPO from here: https://www.microsoft.com/en-us/download/details.aspx?id=55319
 
