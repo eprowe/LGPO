@@ -12,12 +12,16 @@ Specific policy notes:
 
 Google\Google Chrome\Deprecated policies\Enable HTTP/0.9 support on non-default ports
     This policy is deprecated.  Including it anyway.
+
 Google\Google Chrome\Password manager\Enable saving passwords to the password manager
     CIS recommends this policy be configured to meet an organizations needs.  For this LGPO file we'll keep it enabled, the default value.
+
 Google\Google Chrome\Enable Chrome Cleanup on Windows
     CIS recommends this policy be configured to meet an organizations needs.  For this LGPO file we'll keep it enabled, the default value.
+
 Google\Google Update\Applications\Google Chrome\Update policy override
     Two settings are recommended "Enabled - Always allow updates (recommended)" and "Enabled - Automatic silent updates only".  This file configured for the former.
+
 Google\Google Chrome\Remote access\Configure the required domain names for remote access clients
     CIS recommends this to be enabled and a domain entered.  Each domain is unique so please adjust these settings accordingly.
     These setting need to be duplicated for each domain
