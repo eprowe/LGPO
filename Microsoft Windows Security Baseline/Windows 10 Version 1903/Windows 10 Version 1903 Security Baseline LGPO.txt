@@ -288,12 +288,6 @@ Software\Policies\Microsoft\Windows NT\Rpc
 RestrictRemoteClients
 DWORD:1
 
-; Computer Configuration\Administrative Templates\System\Service Control Manager Settings\Security Settings\Enable svchost.exe mitigation options - Enabled
-Computer
-System\CurrentControlSet\Control\SCMConfig
-EnableSvchostMitigationPolicy
-DWORD:1
-
 ; Computer Configuration\Administrative Templates\Windows Components\App Privacy\Let Windows apps activate with voice while the system is locked - Force Deny
 Computer
 Software\Policies\Microsoft\Windows\AppPrivacy
