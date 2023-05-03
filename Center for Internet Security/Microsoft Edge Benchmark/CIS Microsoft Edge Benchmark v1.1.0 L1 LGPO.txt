@@ -1,0 +1,464 @@
+; Text file to be used in combination with LGPO.exe to easily import Local Group Policies
+
+;----------Begin Computer Configuration Local Group Policy----------
+; Computer Configuration\Administrative Templates\Microsoft Edge\Cast\Enable Google Cast - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+EnableMediaRouter
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Content settings\Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+SpotlightExperiencesAndRecommendationsEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Content settings\Control use of insecure content exceptions - Enabled: Do not allow any site to load mixed content
+Computer
+Software\Policies\Microsoft\Edge
+DefaultinsecurecontentSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Content settings\Default geolocation setting - Enable: Don't allow any site to track users physical location
+Computer
+Software\Policies\Microsoft\Edge
+DefaultGeolocationSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Experimentation\Configure users ability to override feature flags - Enabled: Prevent users from overriding feature flags
+Computer
+Software\Policies\Microsoft\Edge
+FeatureFlagoverridesControl
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\HTTP authentication\Allow Basic authentication for HTTP - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+BasicAuthOverHttpEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\HTTP authentication\Allow cross-origin HTTP Basic Auth prompts - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+AllowCrossOriginAuthPrompt
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Password manaer and protection\Enable saving passwords to the password manager - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+PasswordManagerEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Performance\Enable startup boost - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+StartupBoostEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Private network Request Settings\Specifies whether to allow insecure websites to make requests to more-private network endpoints - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+InsecurePrivateNetworkRequestsAllowed
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\SmartScreen settings\Configure Microsoft Defender SmartScreen - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+SmartScreenEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\SmartScreen settings\Configure Microsoft Defender SmartScreen to block potentially unwanted apps - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+SmartScreenPuaEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\SmartScreen settings\Configure Microsoft Defender SmartScreen DNS requests - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+SmartScreenDnsRequestsEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\SmartScreen settings\Force Microsoft Defender SmartScreen checks on downloads from trusted sources - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+SmartScreenForTrustedDownloadsEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\SmartScreen settings\Prevent bypassing Microsoft Defender SmartScreen prompts for sites - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+PreventSmartScreenPromptOverride
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\SmartScreen settings\Prevent bypassing Microsoft Defender SmartScreen warnings about downloads - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+PreventSmartScreenPromptOverrideForFiles
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\TyposquattingChecker settings\Configure Edge TyposquattingChecker - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+TyposquattingCheckerEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Ads setting for sites with intrusive ads - Enabled: Block ads on sites with intrusive ads
+Computer
+Software\Policies\Microsoft\Edge
+AdsSettingForIntrusiveAdsSites
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow download restrictions - Enabled: Block potentially dangerous downloads
+Computer
+Software\Policies\Microsoft\Edge
+DownloadRestrictions
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow Google Cast to connect to Cast devices on all IP addresses - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+MediaRouterCastAllowAllIPs
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow importing of autofill form data - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ImportAutofillFormData
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow importing of browser settings - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ImportBrowserSettings
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow importing of home page settings - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ImportHomepage
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow importing of payment info - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ImportPaymentInfo
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow importing of saved passwords - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ImportSavedPasswords
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow importing of search engine settings - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ImportSearchEngine
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow managed extensions to use the Enterprise Hardware Platform API - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+EnterpriseHardwarePlatformAPIEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow personalization of ads search and news by sending browsing history to Microsoft - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+PersonalizationReportingEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow queries to a Browser Network Time service - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+BrowserNetworkTimeQueriesEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow remote debugging - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+RemoteDebuggingAllowed
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow the audio sandbox to run - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+AudioSandboxEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow user feedback - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+UserFeedbackAllowed
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow websites to query for available payment methods - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+PaymentMethodQueryEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Automatically import another browser's data and settings at first run - Enabled: Disables automatica import, and the import section of the first-run experience is skipped
+Computer
+Software\Policies\Microsoft\Edge
+AutoImportAtFirstRun
+DWORD:4
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Block tacking of users' web-browsing activity - Enabled: Balanced (Blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)
+Computer
+Software\Policies\Microsoft\Edge
+TrackingPrevention
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Clear browsing data when Microsoft Edge closes - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ClearBrowsingDataOnExit
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Clear cached images and files when Microsoft Edge closes - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ClearCachedImagesAndFilesOnExit
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Configure InPrivate mode availability - Enabled: InPrivate mode disabled
+Computer
+Software\Policies\Microsoft\Edge
+InPrivateModeAvailability
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Configure the list of names that will bypass the HSTS policy check - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+HSTSPolicyBypassList
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Configure the list of types that are excluded from synchronization - Enabled
+Computer
+Software\Policies\Microsoft\Edge\SyncTypesListDisabled
+1
+SZ:passwords
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Configure the Share experience - Enabled: Don't allow using the Share experience
+Computer
+Software\Policies\Microsoft\Edge
+ConfigureShare
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode - Enabled: Do not send form data or headers
+Computer
+Software\Policies\Microsoft\Edge
+InternetExplorerIntegrationComplexNavDataTypes
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Continue running background apps after Microsoft Edge closes - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+BackgroundModeEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Control communication with the Experimentation and Configuration Service - Enabled: Disable communication with the Experimentation and Configuration Service
+Computer
+Software\Policies\Microsoft\Edge
+ExperimentationAndConfigurationServiceControl
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Delete old browser data on migration - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+DeleteDataOnMigration
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Disable saving browser history - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+SavingBrowserHistoryDisabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Disable synchronization of data using Microsoft sync services - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+SyncDisabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\DNS interception checks enabled - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+DNSInterceptionChecksEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable AutoFill for addresses - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+AutofillAddressEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable AutoFill for payment instructions - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+AutofillCreditCardEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable browser legacy extension point blocking - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+BrowserLegacyExtensionPointsBlockingEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable component updates in Microsoft Edge - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+ComponentUpdatesEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable deleting browser and download history - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+AllowDeletingBrowserHistory
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable Follow service in Microsoft Edge - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+EdgeFollowEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable globally scoped HTTP auth cache - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+GloballyScopeHTTPAuthCacheEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable network prediction - Enabled: Don't predict network actions on any network connection
+Computer
+Software\Policies\Microsoft\Edge
+NetworkPredictionOptions
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable profile creation from the Identity flyout menu or the Settings page - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+BrowserAddProfileEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable renderer code integrity - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+RendererCodeIntegrityEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable resolution of navigation errors using a web service - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ResolveNavigationErrorsUseWebService
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable security warnings for command-line flags - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+CommandLineFlagSecurityWarningsEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable site isolation for every site - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+SitePerProcess
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable travel assistance - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+TravelAssistanceEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable use of ephemeral profiles - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+ForceEphemeralProfiles
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enable warnings for insecure forms - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+InsecureFormsWarningsEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Enhance the security state in Microsoft Edge - Enabled: Balanced mode
+Computer
+Software\Policies\Microsoft\Edge
+EnhanceSecurityMode
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Hide the First-run experience and splash screen - Enabled
+Computer
+Software\Policies\Microsoft\Edge
+HideFirstRunExperience
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\In-app support Enabled - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+InAppSupportEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Notify a user that a browser restart is recommended or required for pending updates - Enabled: Required - Show a recurring prompt to the user indicating that a restart is required
+Computer
+Software\Policies\Microsoft\Edge
+RelaunchNotification
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Restrict exposure of local IP addresses by WebRTC - Enabled: Allow public interface over http default route.  This doesn't expose the local IP address
+Computer
+Software\Policies\Microsoft\Edge
+WebRtcLocalhostIpHandling
+SZ:default_public_interface_only
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Set disk cache size, in bytes - Enabled: 250609664
+Computer
+Software\Policies\Microsoft\Edge
+DiskCacheSize
+DWORD:250609664
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Set the time period for update notifications - Enabled: 86400000
+Computer
+Software\Policies\Microsoft\Edge
+RelaunchNotificationPeriod
+DWORD:86400000
+
+; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Shopping in Microsoft Edge Enabled - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+EdgeShoppingAssistantEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Show the Reload in Internet Explorer mode button in the toolbar - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+InternetExplorerModeToolbarButtonEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Specifies whether SharedArrayBuffers can be used in non cross-origin-isolated context - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+SharedArrayBufferUnrestrictedAccessAllowed
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Suggest similar pages when a webpage can't be found - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+AlternateErrorPagesEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Suppress the unsupported OS warning - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+SuppressUnsupportedOSWarning
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge Update\Applications\Update policy override default - Enabled: Always allow updates (recommended)
+Computer
+Software\Policies\Microsoft\EdgeUpdate
+UpdateDefault
+DWORD:1
