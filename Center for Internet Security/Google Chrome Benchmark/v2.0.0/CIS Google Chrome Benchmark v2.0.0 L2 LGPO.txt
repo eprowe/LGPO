@@ -1,0 +1,401 @@
+; Text file to be used in combination with LGPO.exe to easily import Local Group Policies
+
+;----------Begin Computer Configuration Local Group Policy----------
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Control use of the Web Bluetooth API - Enabled:Do not allow any site to request access to Bluetooth devices via the Web Bluetooth API
+Computer
+Software\Policies\Google\Chrome
+DefaultWebBluetoothGuardSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Control use of the WebUSB API - Enabled:Do not allow any site to request access to USB devices via the WebUSB API
+Computer
+Software\Policies\Google\Chrome
+DefaultWebUsbGuardSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default cookies setting - Enabled:Keep cookies for the duration of the session
+Computer
+Software\Policies\Google\Chrome
+DefaultCookiesSetting
+DWORD:4
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default Flash setting - Enabled:Click to play
+Computer
+Software\Policies\Google\Chrome
+DefaultPluginsSetting
+DWORD:3
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default geolocation setting - Enabled:Do not allow any site to track the users' physical location
+Computer
+Software\Policies\Google\Chrome
+DefaultGeolocationSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default notification setting - Enabled:Do not allow any site to show desktop notifications
+Computer
+Software\Policies\Google\Chrome
+DefaultNotificationsSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Deprecated policies\Enable HTTP/0.9 support on non-default ports - Disabled
+Computer
+Software\Policies\Google\Chrome
+Http09OnNonDefaultPortsEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Extensions\Configre allowed app/extension types - Enabled:extension,hosted_app,platform_app,theme
+Computer
+Software\Policies\Google\Chrome\ExtensionAllowedTypes
+1
+SZ:extension
+
+Computer
+Software\Policies\Google\Chrome\ExtensionAllowedTypes
+2
+SZ:hosted_app
+
+Computer
+Software\Policies\Google\Chrome\ExtensionAllowedTypes
+3
+SZ:platform_app
+
+Computer
+Software\Policies\Google\Chrome\ExtensionAllowedTypes
+4
+SZ:theme
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Extensions\Configure extension installation blacklist - Enabled:*
+Computer
+Software\Policies\Google\Chrome\ExtensionInstallBlacklist
+1
+SZ:*
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Google Cast\Enable Google Cast - Disabled
+Computer
+Software\Policies\Google\Chrome
+EnableMediaRouter
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\HTTP authentication\Supported authentication schemes - Enabed:ntlm, negotiate
+Computer
+Software\Policies\Google\Chrome
+AuthSchemes
+SZ:ntlm,negotiate
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Native Messaging\Configure native messaging blacklist\Enabled:*
+Computer
+Software\Policies\Google\Chrome\NativeMessagingBlacklist
+1
+SZ:*
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Password manager\Enable saving passwords to the password manager - Enabled
+Computer
+Software\Policies\Google\Chrome
+PasswordManagerEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Printing\Enable Google Cloud Print proxy - Disabled
+Computer
+Software\Policies\Google\Chrome
+CloudPrintProxyEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Printing\Enable submission of documents to Google Cloud Print\Disabled
+Computer
+Software\Policies\Google\Chrome
+CloudPrintSubmitEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Proxy server\Choose how to specify proxy server settings - Enabled:Auto detect proxy settings
+Computer
+Software\Policies\Google\Chrome
+ProxyMode
+SZ:auto_detect
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Allow gnubby authentication for remote access hosts - Disabled
+Computer
+Software\Policies\Google\Chrome
+RemoteAccessHostAllowGnubbyAuth
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Allow remote users to interact with elevated windows in remote assistance sessions - Disabled
+Computer
+Software\Policies\Google\Chrome
+RemoteAccessHostAllowUiAccessForRemoteAssistance
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Configure the required domain names for remote access clients - Enabled:nodomain.local
+Computer
+Software\Policies\Google\Chrome\RemoteAccessHostClientDomainList
+1
+SZ:nodomain.local
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Enable curtaining of remote access hosts - Disabled
+Computer
+Software\Policies\Google\Chrome
+RemoteAccessHostRequireCurtain
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Enable firewall traversal from remote access host - Disabled
+Computer
+Software\Policies\Google\Chrome
+RemoteAccessHostFirewallTraversal
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Enable or disable PIN-less authentication for remote access hosts - Disabled
+Computer
+Software\Policies\Google\Chrome
+RemoteAccessHostAllowClientPairing
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Remote access\Enable the use of relay servers by the remote access host - Disabled
+Computer
+Software\Policies\Google\Chrome
+RemoteAccessHostAllowRelayedConnection
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Update\Applications\Google Chrome\Update policy override - Enabled:Always allow updates (recommended)
+Computer
+Software\Policies\Google\Update
+Update{8A69D345-D564-463C-AFF1-A69D9E530F96}
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow download restrictions - Enabled:Block dangerous downloads
+Computer
+Software\Policies\Google\Chrome
+DownloadRestrictions
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow running plugins that are outdated - Disabled
+Computer
+Software\Policies\Google\Chrome
+AllowOutdatedPlugins
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow WebDriver to Override Incompatible Policies - Disabled
+Computer
+Software\Policies\Google\Chrome
+WebDriverOverridesIncompatiblePolicies
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Ask where to save each file before downloading - Enabled
+Computer
+Software\Policies\Google\Chrome
+PromptForDownloadLocation
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Block third party cookies - Enabled
+Computer
+Software\Policies\Google\Chrome
+BlockThirdPartyCookies
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Browser sign in settings - Enabled:Disable browser sign-in
+Computer
+Software\Policies\Google\Chrome
+BrowserSignin
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Continue running background apps when Google Chrome is closed - Disabled
+Computer
+Software\Policies\Google\Chrome
+BackgroundModeEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Control how Chrome Cleanup reports data to Google - Disabled
+Computer
+Software\Policies\Google\Chrome
+ChromeCleanupReportingEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Control SafeSites adult content filtering. - Enabled:Do not filter sites for adult content
+Computer
+Software\Policies\Google\Chrome
+SafeSitesFilterBehavior
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Disable Certificate Transparency enforcement for a list of Legacy Certificate Authorities - Disabled
+Computer
+Software\Policies\Google\Chrome\CertificateTransparencyEnforcementDisabledForLegacyCas
+*
+DELETEALLVALUES
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Disable Certificate Transparency enforcement for a list of subjectPublicKeyInto hashes - Disabled
+Computer
+Software\Policies\Google\Chrome\CertificateTransparencyEnforcementDisabledForCas
+*
+DELETEALLVALUES
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Disable Certificate Transparency enforcement for a list of URLs - Disabled
+Computer
+Software\Policies\Google\Chrome\CertificateTransparencyEnforcementDisabledForUrls
+*
+DELETEALLVALUES
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Disable proceeding from the Safe Browsing warning page - Enabled
+Computer
+Software\Policies\Google\Chrome
+DisableSafeBrowsingProceedAnyway
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Disable saving browser history - Disabled
+Computer
+Software\Policies\Google\Chrome
+SavingBrowserHistoryDisabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Disable synchronization of data with Google - Enabled
+Computer
+Software\Policies\Google\Chrome
+SyncDisabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable alternate error pages - Disabled
+Computer
+Software\Policies\Google\Chrome
+AlternateErrorPagesEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable AutoFill for addresses - Disabled
+Computer
+Software\Policies\Google\Chrome
+AutofillAddressEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable AutoFill for credit cards - Disabled
+Computer
+Software\Policies\Google\Chrome
+AutofillCreditCardEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable Chrome Cleanup on Windows - Enabled
+Computer
+Software\Policies\Google\Chrome
+ChromeCleanupEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable components updates in Google Chrome - Enabled
+Computer
+Software\Policies\Google\Chrome
+ComponentUpdatesEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable deleting browser and download history - Disabled
+Computer
+Software\Policies\Google\Chrome
+AllowDeletingBrowserHistory
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable deprecated web platform features for a limited time - Disabled
+Computer
+Software\Policies\Google\Chrome\EnableDeprecatedWebPlatformFeatures
+*
+DELETEALLVALUES
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable network prediction - Enabled:Do not predict actions on any network connection
+Computer
+Software\Policies\Google\Chrome
+NetworkPredictionOptions
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable online OCSP/CRL checks - Disabled
+Computer
+Software\Policies\Google\Chrome
+EnableOnlineRevocationChecks
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable or disable spell checking web service - Disabled
+Computer
+Software\Policies\Google\Chrome
+SpellCheckServiceEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable reporting of usage and crash-related data - Disabled
+Computer
+Software\Policies\Google\Chrome
+MetricsReportingEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable Safe Browsing for trusted sources - Disabled
+Computer
+Software\Policies\Google\Chrome
+SafeBrowsingForTrustedSourcesEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable search suggestions - Disabled
+Computer
+Software\Policies\Google\Chrome
+SearchSuggestEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable Site Isolation for every site - Enabled
+Computer
+Software\Policies\Google\Chrome
+SitePerProcess
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable third party software injection blocking - Enabled
+Computer
+Software\Policies\Google\Chrome
+ThirdPartyBlockingEnabled
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable Translate - Disabled
+Computer
+Software\Policies\Google\Chrome
+TranslateEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable URL-keyed anonymized data collection - Disabled
+Computer
+Software\Policies\Google\Chrome
+UrlKeyedAnonymizedDataCollectionEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Extend Flash content setting to all content - Disabled
+Computer
+Software\Policies\Google\Chrome
+RunAllFlashInAllowMode
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Import saved passwords from default browser on first run - Disabled
+Computer
+Software\Policies\Google\Chrome
+ImportSavedPasswords
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Notify a user that a browser relaunch or device restart is recommended or required - Enabled:Show a recurring prompt to the user indicating that a relaunch is required
+Computer
+Software\Policies\Google\Chrome
+RelaunchNotification
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Origins or hostname patterns for which restrictions on insecure origins should not apply - Disabled
+Computer
+Software\Policies\Google\Chrome\OverrideSecurityRestrictionsOnInsecureOrigin
+*
+DELETEALLVALUES
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Require online OCSP/CRL checks for local trust anchors - Enabled
+Computer
+Software\Policies\Google\Chrome
+RequireOnlineRevocationChecksForLocalAnchors
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Set the time period for update notifications - Enabled:86400000
+Computer
+Software\Policies\Google\Chrome
+RelaunchNotificationPeriod
+DWORD:86400000
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Suppress the unsupported OS warning - Disabled
+Computer
+Software\Policies\Google\Chrome
+SuppressUnsupportedOSWarning
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Use built-in DNS client - Disabled
+Computer
+Software\Policies\Google\Chrome
+BuiltInDnsClientEnabled
+DWORD:0
