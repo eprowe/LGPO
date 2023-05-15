@@ -1,16 +1,58 @@
 ; Text file to be used in combination with LGPO.exe to easily import Local Group Policies
 
 ;----------Begin Computer Configuration Local Group Policy----------
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow or deny screen capture\Allow or deny screen capture - Disabled
+Computer
+Software\Policies\Google\Chrome
+ScreenCaptureAllowed
+DWORD:0
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Control use of insecure content exceptions - Enabled: Do not allow any site to load mixed content
 Computer
 Software\Policies\Google\Chrome
 DefaultInsecureContentSetting
 DWORD:2
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Control use of the Serial API - Enabled: Do not allow any site to request access to serial ports via the Serial API
+Computer
+Software\Policies\Google\Chrome
+DefaultSerialGuardSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Control use of the Web Bluetooth API - Enabled: Do not allow any site to request access to Bluetooth devices via the Web Bluetooth API
+Computer
+Software\Policies\Google\Chrome
+DefaultWebBluetoothGuardSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Control use of the WebUSB API - Enabled: Do not allow any site to request access to USB devices via the WebUSB API
+Computer
+Software\Policies\Google\Chrome
+DefaultWebUsbGuardSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default cookies setting - Enabled: Keep cookies for the duration of the session
+Computer
+Software\Policies\Google\Chrome
+DefaultCookiesSetting
+DWORD:4
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default geolocation setting - Enabled: Do not allow any site to track the users' physical location
 Computer
 Software\Policies\Google\Chrome
 DefaultGeolocationSetting
+DWORD:2
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default notification setting - Enabled: Do not allow any site to show desktop notifications
+Computer
+Software\Policies\Google\Chrome
+DefaultNotificationsSetting
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Content settings\Default sensors setting - Enabled: Do not allow any site to access sensors
+Computer
+Software\Policies\Google\Chrome
+DefaultSensorsSetting
 DWORD:2
 
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Extensions\Blocks external extensions from being installed - Enabled
@@ -72,6 +114,12 @@ Computer
 Software\Policies\Google\Chrome
 AuthSchemes
 SZ:ntlm,negotiate
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Native Messaging\Configure native messaging blocklist - Enabled: *
+Computer
+Software\Policies\Google\Chrome
+NativeMessagingBlocklist
+SZ:*
 
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Password manager\Enable saving passwords to the password manager - Disabled
 Computer
@@ -145,6 +193,30 @@ Software\Policies\Google\Chrome
 DownloadRestrictions
 DWORD:1
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow invocation of file selection dialogs - Disabled
+Computer
+Software\Policies\Google\Chrome
+AllowFileSelectionDialogs
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow or deny audio capture - Disabled
+Computer
+Software\Policies\Google\Chrome
+AudioCaptureAllowed
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow or deny video capture - Disabled
+Computer
+Software\Policies\Google\Chrome
+VideoCaptureAllowed
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow proceeding from the SSL warning page - Disabled
+Computer
+Software\Policies\Google\Chrome
+SSLErrorOverrideAllowed
+DWORD:0
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Allow queries to a Google time service - Enabled
 Computer
 Software\Policies\Google\Chrome
@@ -181,6 +253,12 @@ Software\Policies\Google\Chrome
 BlockThirdPartyCookies
 DWORD:1
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Browser sign in settings - Enabled: Disable browser sign-in
+Computer
+Software\Policies\Google\Chrome
+BrowserSignin
+DWORD:0
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Continue running background apps when Google Chrome is closed - Disabled
 Computer
 Software\Policies\Google\Chrome
@@ -192,6 +270,18 @@ Computer
 Software\Policies\Google\Chrome
 ChromeCleanupReportingEnabled
 DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Control SafeSites adult content filtering - Enabled: Filter top level sites (but not embedded iframes)
+Computer
+Software\Policies\Google\Chrome
+SafeSitesFilterBehavior
+DWORD:1
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Controls the mode of DNS-over-HTTPS - Enabled: DNS-over-HTTPS without insecure fallback
+Computer
+Software\Policies\Google\Chrome
+DnsOverHttpsMode
+SZ:secure
 
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Determine the availability of variations - Disabled
 Computer
@@ -283,6 +373,12 @@ Software\Policies\Google\Chrome
 GloballyScopeHTTPAuthCacheEnabled
 DWORD:0
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable guest mode in browser - Disabled
+Computer
+Software\Policies\Google\Chrome
+BrowserGuestModeEnabled
+DWORD:0
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable network prediction - Enabled: Do not predict actions on any network connection
 Computer
 Software\Policies\Google\Chrome
@@ -319,6 +415,12 @@ Software\Policies\Google\Chrome
 SafeBrowsingForTrustedSourcesEnabled
 DWORD:0
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable search suggestions - Disabled
+Computer
+Software\Policies\Google\Chrome
+SearchSuggestEnabled
+DWORD:0
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable security warnings for command-line flags - Enabled
 Computer
 Software\Policies\Google\Chrome
@@ -337,6 +439,12 @@ Software\Policies\Google\Chrome
 ThirdPartyBlockingEnabled
 DWORD:1
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable Translate - Disabled
+Computer
+Software\Policies\Google\Chrome
+TranslateEnabled
+DWORD:0
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Enable URL-keyed anonymized data collection - Disabled
 Computer
 Software\Policies\Google\Chrome
@@ -354,6 +462,12 @@ Computer
 Software\Policies\Google\Chrome
 ForceEphemeralProfiles
 DWORD:0
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Force Google SafeSearch - Enabled
+Computer
+Software\Policies\Google\Chrome
+ForceGoogleSafeSearch
+DWORD:1
 
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Import autofill form data from default browser on first run - Disabled
 Computer
@@ -379,13 +493,19 @@ Software\Policies\Google\Chrome
 ImportSearchEngine
 DWORD:0
 
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Incognito mode availability - Enabled: Incognito mode disabled
+Computer
+Software\Policies\Google\Chrome
+IncognitoModeAvailability
+DWORD:1
+
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\List of names that will bypass the HSTS policy check - Disabled
 Computer
 Software\Policies\Google\Chrome
 HSTSPolicyBypassList
 DWORD:0
 
-; Computer Configuration\Administrative Templates\Google\Google Chrome\List of types that should be excluded from synchroniation - Enabled: passwords
+; Computer Configuration\Administrative Templates\Google\Google Chrome\List of types that should be excluded from synchronization - Enabled: passwords
 Computer
 Software\Policies\Google\Chrome\SyncTypesListDisabled
 1
@@ -397,7 +517,7 @@ Software\Policies\Google\Chrome
 RelaunchNotification
 DWORD:2
 
-; Computer Configuration\Administrative Templates\Google\Google Chrome\Origins or hostnamee patterns for which restrictions on insecure origins should not apply - Disabled
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Origins or hostname patterns for which restrictions on insecure origins should not apply - Disabled
 Computer
 Software\Policies\Google\Chrome
 OverrideSecurityRestrictionsOnInsecureOrigin
@@ -408,6 +528,12 @@ Computer
 Software\Policies\Google\Chrome
 ProxySettings
 SZ:{"ProxyMode":"direct"}
+
+; Computer Configuration\Administrative Templates\Google\Google Chrome\Require online OCSP/CRL checks for local trust anchors - Enabled
+Computer
+Software\Policies\Google\Chrome
+RequireOnlineRevocationChecksForLocalAnchors
+DWORD:1
 
 ; Computer Configuration\Administrative Templates\Google\Google Chrome\Set disk cache size in bytes - Enabled: 250609664
 Computer

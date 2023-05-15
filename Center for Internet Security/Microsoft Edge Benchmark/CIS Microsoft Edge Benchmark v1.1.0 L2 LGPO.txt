@@ -91,7 +91,7 @@ Software\Policies\Microsoft\Edge
 AuthSchemes
 SZ:ntlm,negotiate
 
-; Computer Configuration\Administrative Templates\Microsoft Edge\Password manaer and protection\Enable saving passwords to the password manager - Disabled
+; Computer Configuration\Administrative Templates\Microsoft Edge\Password manager and protection\Enable saving passwords to the password manager - Disabled
 Computer
 Software\Policies\Microsoft\Edge
 PasswordManagerEnabled
@@ -103,7 +103,7 @@ Software\Policies\Microsoft\Edge
 StartupBoostEnabled
 DWORD:0
 
-; Computer Configuration\Administrative Templates\Microsoft Edge\Private network Request Settings\Specifies whether to allow insecure websites to make requests to more-private network endpoints - Disabled
+; Computer Configuration\Administrative Templates\Microsoft Edge\Private Network Request Settings\Specifies whether to allow insecure websites to make requests to more-private network endpoints - Disabled
 Computer
 Software\Policies\Microsoft\Edge
 InsecurePrivateNetworkRequestsAllowed
@@ -162,6 +162,12 @@ Computer
 Software\Policies\Microsoft\Edge
 DownloadRestrictions
 DWORD:2
+
+; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Allow features to download assets from the Asset Delivery Service - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+EdgeAssetDeliveryServiceEnabled
+DWORD:0
 
 ; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Allow file selection dialog - Disabled
 Computer
@@ -235,7 +241,7 @@ Software\Policies\Microsoft\Edge
 ScreenCaptureAllowed
 DWORD:0
 
-; Computer Configuration\Administrative Templates\Microsoft Edge\Allow personalization of ads search and news by sending browsing history to Microsoft - Disabled
+; Computer Configuration\Administrative Templates\Microsoft Edge\Allow personalization of ads, Microsoft Edge, search, news, and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft - Disabled
 Computer
 Software\Policies\Microsoft\Edge
 PersonalizationReportingEnabled
@@ -307,7 +313,7 @@ Software\Policies\Microsoft\Edge
 AutoLaunchProtocolsComponentEnabled
 DWORD:0
 
-; Computer Configuration\Administrative Templates\Microsoft Edge\Automatically import another browser's data and settings at first run - Enabled: Disables automatica import, and the import section of the first-run experience is skipped
+; Computer Configuration\Administrative Templates\Microsoft Edge\Automatically import another browser's data and settings at first run - Enabled: Disables automatic import, and the import section of the first-run experience is skipped
 Computer
 Software\Policies\Microsoft\Edge
 AutoImportAtFirstRun
@@ -319,7 +325,7 @@ Software\Policies\Microsoft\Edge
 BlockThirdPartyCookies
 DWORD:1
 
-; Computer Configuration\Administrative Templates\Microsoft Edge\Block tacking of users' web-browsing activity - Enabled: Balanced (Blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)
+; Computer Configuration\Administrative Templates\Microsoft Edge\Block tracking of users' web-browsing activity - Enabled: Balanced (Blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)
 Computer
 Software\Policies\Microsoft\Edge
 TrackingPrevention
@@ -421,7 +427,7 @@ Software\Policies\Microsoft\Edge
 OverrideSecurityRestrictionsOnInsecureOriginDesc
 DWORD:0
 
-; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Default sensor setting - Enabled: Do not allow any site to access sensors
+; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Default sensors setting - Enabled: Do not allow any site to access sensors
 Computer
 Software\Policies\Microsoft\Edge
 DefaultSensorsSetting
@@ -565,7 +571,7 @@ Software\Policies\Microsoft\Edge
 InsecureFormsWarningsEnabled
 DWORD:1
 
-; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Enable Bing SafeSearch - Enabled: Configure moderate search restrictions in Bing
+; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Enforce Bing SafeSearch - Enabled: Configure moderate search restrictions in Bing
 Computer
 Software\Policies\Microsoft\Edge
 ForceBingSafeSearch
@@ -596,6 +602,12 @@ InAppSupportEnabled
 DWORD:0
 
 ; (L2)Computer Configuration\Administrative Templates\Microsoft Edge\Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge - Disabled
+Computer
+Software\Policies\Microsoft\Edge
+MathSolverEnabled
+DWORD:0
+
+; Computer Configuration\Administrative Templates\Microsoft Edge\Manage exposure of local IP addresses by WebRTC - Disabled
 Computer
 Software\Policies\Microsoft\Edge
 MathSolverEnabled
